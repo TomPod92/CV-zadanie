@@ -20,7 +20,8 @@ body {
   font-weight: 400;
   line-height: 1.7;
   box-sizing: border-box;
-  background-image: linear-gradient(to right top, var(--color-primary-light), var(--color-primary-dark));
+  background-image: linear-gradient(to right top, #FBFBFD, #BCBDBF);
+  position: relative;
   min-height: 100vh; }
 
 .question__container {
@@ -30,7 +31,7 @@ body {
   transform: translate(-50%, -50%);
   width: 40%;
   height: 60%;
-  background-color: rgba(221, 221, 221, 0.9);
+  background-color: rgba(221, 221, 221, 0.7);
   border-radius: 10px;
   padding: 2rem;
   box-shadow: 0rem 0rem 5rem var(--color-grey);
@@ -80,7 +81,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%;
+  width: 25%;
   background-color: rgba(221, 221, 221, 0.9);
   border-radius: 10px;
   padding: 2rem;
@@ -94,13 +95,61 @@ body {
     padding: 1rem 2rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    border-radius: 15px; }
+    border-radius: 15px;
+    margin-bottom: 1.5rem; }
   .fail__button {
-    background-color: var(--color-primary);
-    font-size: 4rem;
+    background-color: transparent;
     border: none;
-    transition: all .7s; }
-    .fail__button:hover {
-      background-color: white;
-      transform: scale(1.04);
-      box-shadow: 0.5rem 0.5rem 5rem rgba(0, 0, 0, 0.4); }
+    backface-visibility: hidden; }
+    .fail__button svg {
+      width: 50px;
+      height: 50px;
+      backface-visibility: hidden;
+      transition: all .7s; }
+    .fail__button:hover svg {
+      fill: var(--color-primary);
+      transform: scale(1.04) rotateZ(90deg); }
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  background-color: green; }
+
+.cv {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-areas: "image image image profile profile profile profile" "image image image profile profile profile profile" "image image image profile profile profile profile" "name name name education education education education" "name name name education education education education" "contact contact contact education education education education" "contact contact contact education education education education" "contact contact contact experience experience experience experience" "contact contact contact experience experience experience experience" "hobbies hobbies hobbies skills skills skills skills" "hobbies hobbies hobbies skills skills skills skills" "hobbies hobbies hobbies skills skills skills skills"; }
+  @media (max-width: 800px) {
+    .cv {
+      grid-template-areas: "image image image name name name name" "image image image name name name name" "image image image name name name name" "contact contact contact contact contact contact contact" "contact contact contact contact contact contact contact" "contact contact contact contact contact contact contact" "contact contact contact contact contact contact contact" "profile profile profile profile profile profile profile" "profile profile profile profile profile profile profile" "profile profile profile profile profile profile profile" "education education education education education education education" "education education education education education education education" "education education education education education education education" "education education education education education education education" "experience experience experience experience experience experience experience" "experience experience experience experience experience experience experience" "skills skills skills skills skills skills skills" "skills skills skills skills skills skills skills" "skills skills skills skills skills skills skills"  "hobbies hobbies hobbies hobbies hobbies hobbies hobbies"; } }
+  .cv div:nth-child(odd) {
+    background-color: #dfdfdf; }
+  .cv div:nth-child(even) {
+    background-color: #a1a1a1; }
+  .cv__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 3rem; }
+    .cv__box--image {
+      grid-area: image; }
+    .cv__box--name {
+      grid-area: name; }
+    .cv__box--contact {
+      grid-area: contact; }
+    .cv__box--hobbies {
+      grid-area: hobbies; }
+    .cv__box--profile {
+      grid-area: profile; }
+    .cv__box--education {
+      grid-area: education; }
+    .cv__box--experience {
+      grid-area: experience; }
+    .cv__box--skills {
+      grid-area: skills; }

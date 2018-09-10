@@ -1,0 +1,105 @@
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    width: 80vw;
+    background-color: green;
+}
+
+.cv {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas:"image image image profile profile profile profile"
+                        "image image image profile profile profile profile"
+                        "image image image profile profile profile profile"
+                        "name name name education education education education"
+                        "name name name education education education education"
+                        "contact contact contact education education education education"
+                        "contact contact contact education education education education"
+                        "contact contact contact experience experience experience experience"
+                        "contact contact contact experience experience experience experience"
+                        "hobbies hobbies hobbies skills skills skills skills"
+                        "hobbies hobbies hobbies skills skills skills skills"
+                        "hobbies hobbies hobbies skills skills skills skills";
+    @media (max-width: 800px) {
+        grid-template-areas:"image image image name name name name"
+                        "image image image name name name name"
+                        "image image image name name name name"
+                        "contact contact contact contact contact contact contact"
+                        "contact contact contact contact contact contact contact"
+                        "contact contact contact contact contact contact contact"
+                        "contact contact contact contact contact contact contact"
+                        "profile profile profile profile profile profile profile"
+                        "profile profile profile profile profile profile profile"
+                        "profile profile profile profile profile profile profile"
+                        "education education education education education education education"
+                        "education education education education education education education"
+                        "education education education education education education education"
+                        "education education education education education education education"
+                        "experience experience experience experience experience experience experience"
+                        "experience experience experience experience experience experience experience"
+                        "skills skills skills skills skills skills skills"
+                        "skills skills skills skills skills skills skills"
+                        "skills skills skills skills skills skills skills"
+                        
+                        "hobbies hobbies hobbies hobbies hobbies hobbies hobbies";
+    }
+    div:nth-child(odd) {
+        background-color: rgb(223, 223, 223);
+    }
+
+    div:nth-child(even) {
+        background-color: rgb(161, 161, 161);
+    }
+
+    &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 3rem;
+
+        &--image {
+            grid-area: image;
+        }
+
+        &--name {
+            grid-area: name;
+        }
+
+        &--contact {
+            grid-area: contact;
+        }
+
+        &--hobbies {
+            grid-area: hobbies;
+        }
+
+        &--profile {
+            grid-area: profile;
+        }
+
+        &--education {
+            grid-area: education;
+        }
+
+        &--experience {
+            grid-area: experience;
+        }
+
+        &--skills {
+            grid-area: skills;
+        }
+
+        
+
+        
+    }
+
+}

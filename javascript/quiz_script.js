@@ -40,6 +40,7 @@ loadQuestion = (questionIndex) => {
     text.textContent = q.question;
     answer1.textContent = q.option1;
     answer2.textContent = q.option2;
+    //button.textContent = `Pytanie ${currentQuestion + 1}/${numberOfQuestions}`;
 };
 
 // load next question from array
