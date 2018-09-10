@@ -1,0 +1,22 @@
+{
+  "name": "cv-zadanie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "compile:sass": "node-sass scss/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomPod92/CV-zadanie.git"
+  },
+  "author": "Tomasz Podsiadlik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomPod92/CV-zadanie/issues"
+  },
+  "homepage": "https://github.com/TomPod92/CV-zadanie#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
