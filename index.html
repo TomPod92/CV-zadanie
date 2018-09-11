@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <!--------------------------------------------------SURVEY-------------------------------------------------->
     <!-- <div class="question__container">
         <h1 class="question__text">What is your name?</h1>
@@ -23,11 +22,11 @@
         <input type="radio" id="option2" value="2" name="option" class="question__checkbox">
         <label class="question__answer question__answer--second" for="option2">Przemek</label>
 
-        <button class="question__button">Następne</button>
+        <button class="question__button">Next</button>
     </div>
 
     <div class="fail">
-        <h1 class="fail__text">Odmowa dostępu</h1>
+        <h1 class="fail__text">Access denied</h1>
         <button class="fail__button" onClick="window.location.reload()">
             <svg>
                 <use xlink:href="image/sprite.svg#icon-loop2"></use>
@@ -36,18 +35,111 @@
     </div> -->
 
     <!-----------------------------------------------------CV----------------------------------------------------->
-    <div class="wrapper">
-        <div class="cv">
-            <div class="cv__box cv__box--image">image</div>
-            <div class="cv__box cv__box--name">name</div>
-            <div class="cv__box cv__box--contact">contact</div>
-            <div class="cv__box cv__box--hobbies">hobbies</div>
-            <div class="cv__box cv__box--profile">profile</div>
-            <div class="cv__box cv__box--education">education</div>
-            <div class="cv__box cv__box--experience">experience</div>
-            <div class="cv__box cv__box--skills">skills</div>
+    <div class="grid">
+        <div class="cv__box cv__image">
+            <div class="cv__image--wrapper">
+                <img src="/image/person.png" alt="person photo" class="cv__image--image">
+            </div>
         </div>
+        <div class="cv__box cv__name">
+            <h1 class="cv__name--name">John</h1>
+            <h1 class="cv__name--surname">Smith</h1>
+            <h2 class="cv__name--job">Web Developer</h2>
+        </div>
+        <div class="cv__box cv__contact">
+            <h2 class="cv__contact--contact">Contact</h2>
+            
+            <div class="cv__contact--item">
+                <div class="cv__contact--icon">
+                    <svg>
+                        <use xlink:href="image/sprite.svg#icon-mail2"></use>
+                    </svg>
+                </div>
+                <div class="cv__contact--info">johnsmith@company.com</div>
+            </div>
+
+            <div class="cv__contact--item">
+                <div class="cv__contact--icon">
+                    <svg>
+                        <use xlink:href="image/sprite.svg#icon-phone"></use>
+                    </svg>
+                </div>
+                <div class="cv__contact--info">+62 0819090168930</div>
+            </div>
+
+            <div class="cv__contact--item">
+                <div class="cv__contact--icon">
+                    <svg>
+                        <use xlink:href="image/sprite.svg#icon-home"></use>
+                    </svg>
+                </div>
+                <div class="cv__contact--info">Merkid, Yogyakarta</div>
+            </div>
+
+            <div class="cv__contact--item">
+                <div class="cv__contact--icon">
+                    <svg>
+                        <use xlink:href="image/sprite.svg#icon-sphere"></use>
+                    </svg>
+                </div>
+                <div class="cv__contact--info">www.jhonmrongos.com</div>
+            </div>
+            
+        </div>
+        <div class="cv__box cv__hobbies">
+            <h2 class="cv__hobbies--hobbies">Hobbies</h2>
+
+            <div class="cv__hobbies--row">
+                <div class="cv__hobbies--item">
+                    <div class="cv__hobbies--icon">
+                        <svg>
+                            <use xlink:href="image/sprite.svg#icon-airplane"></use>
+                        </svg>
+                    </div>
+                    <div class="cv__hobbies--info">Travel</div>
+                </div>
+
+                <div class="cv__hobbies--item">
+                    <div class="cv__hobbies--icon">
+                        <svg>
+                            <use xlink:href="image/sprite.svg#icon-book"></use>
+                        </svg>
+                    </div>
+                    <div class="cv__hobbies--info">Reading</div>
+                </div>
+            </div>
+
+            <div class="cv__hobbies--row">
+                <div class="cv__hobbies--item">
+                    <div class="cv__hobbies--icon">
+                        <svg>
+                            <use xlink:href="image/sprite.svg#icon-music"></use>
+                        </svg>
+                    </div>
+                    <div class="cv__hobbies--info">Music</div>
+                </div>
+
+                <div class="cv__hobbies--item">
+                    <div class="cv__hobbies--icon">
+                        <svg>
+                            <use xlink:href="image/sprite.svg#icon-pencil"></use>
+                        </svg>
+                    </div>
+                    <div class="cv__hobbies--info">Writing</div>
+                </div>
+            </div>
+
+            <div class="cv__hobbies--row">
+                  <span class="cv__hobbies--item">Twitter: @Johndoe</span>  
+                  <span class="cv__hobbies--item">Facebook: John Doe</span>  
+            </div>
+        </div>
+        <div class="cv__box cv__profile">profile</div>
+        <div class="cv__box cv__education">education</div>
+        <div class="cv__box cv__experience">experience</div>
+        <div class="cv__box cv__skills">skills</div>
     </div>
+    
     
 
     <!-- <script src="javascript/quiz_script.js" type="text/javascript"></script> -->
