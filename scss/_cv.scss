@@ -57,7 +57,7 @@
         }
 
         &--image {
-            background-image: url(/image/person.png);
+            background-image: url('./image/person.png');
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
