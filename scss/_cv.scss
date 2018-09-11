@@ -42,8 +42,8 @@
         align-items: center;
 
         &--wrapper {         
-            width: 25rem;
-            height: 25rem;
+            width: 30rem;
+            height: 30rem;
             background-color: white;
             border-radius: 50%;
             display: flex;
@@ -53,24 +53,30 @@
             @media (max-width: 600px) {
                 width: 20rem;
                 height: 20rem;
-            }
-            
+            }            
         }
 
         &--image {
+            background-image: url(/image/person.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
             width: 95%;
             height: 95%;
             border-radius: 50%;
             border: .5rem solid var(--color-primary);
             padding: .5rem;
+            align: middle;
         }
     }
 
     &__name {
         grid-area: name;
         text-align: center;
+        color: var(--color-grey-dark);
+        
         font-size: 3rem;
-        letter-spacing: 3px;
+        letter-spacing: 2px;
         text-transform: uppercase;
         line-height: 1.3;
         display: flex;
@@ -79,7 +85,7 @@
         background-color: var(--color-primary);
 
         &--name {
-            
+        
         }
 
         &--surname {
@@ -88,10 +94,12 @@
 
         &--job {
             display: block;
-            font-size: 2rem;
+            font-size: 3.5rem;
+            font-style: italic;
+            font-weight: 400;
             letter-spacing: 3px;
             color: var(--color-primary);
-            padding: 1rem;
+            padding: .5rem;
             background-color: var(--color-grey-dark);
         }
     }
@@ -99,11 +107,13 @@
     &__contact {
         grid-area: contact;
         background-color: var(--color-primary);
+        color: var(--color-grey-dark);
 
         &--contact {
             text-align: center;
-            font-size: 3.5rem;
-            letter-spacing: 3px;
+            font-size: 3.5rem;            
+            letter-spacing: 1.5px;
+            font-weight: 400;
             text-transform: uppercase;
             line-height: 1.5;
             margin: 3rem 0;
@@ -142,12 +152,14 @@
     &__hobbies {
         grid-area: hobbies;
         background-color: var(--color-primary);
+        color: var(--color-grey-dark);
 
 
         &--hobbies {
             text-align: center;
             font-size: 3.5rem;
             letter-spacing: 3px;
+            font-weight: 400;
             text-transform: uppercase;
             line-height: 1.5;
             margin: 3rem 0;
@@ -183,25 +195,164 @@
         }
 
         &--info {
-            font-size: 1.5rem;
-            letter-spacing: 2px;
+            font-size: 2rem;
+            letter-spacing: 1px;
         }
     }
     
 
     &__profile {
         grid-area: profile;
+        padding: 4rem 0 0 3rem;
+        background-color: white;
+
+        &--text {
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+            text-align: left;
+            padding: 1rem 2rem 1rem 0;
+
+            &:nth-child(2) {margin-top: 2rem;}
+            
+        }
     }
 
     &__education {
         grid-area: education;
+        padding: 2rem 0 0 3rem;
+        background-color: white;
+
+        &--timeline {
+            padding: 1.5rem;
+            border-left: 3px solid var(--color-primary);
+            margin: 3rem 0;
+
+            h3 {
+                font-size: 1.7rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 15%;
+                    left: -26px;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 50%;
+                    background-color: var(--color-primary);
+
+                    @media (max-width: 1200px) {left: -21.05px;}
+                    @media (max-width: 900px) {left: -21.5px;}
+                    @media (max-width: 500px) {left: -21px;}
+                }
+            }
+
+            h4 {
+                font-size: 1.2rem;
+                font-weight: bold;
+
+                @media (max-width: 1200px) {font-size: 1.7rem;}
+                @media (max-width: 900px) {font-size: 2.1rem;;}
+                @media (max-width: 500px) {font-size: 2.4rem;}
+            }
+
+            h5 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+                
+                &:not(:last-child) {margin-bottom: 2rem;}
+
+                @media (max-width: 1200px) {font-size: 1.7rem;}
+                @media (max-width: 900px) {font-size: 2.1rem;;}
+                @media (max-width: 500px) {font-size: 2.4rem;}
+            }
+        }
     }
 
     &__experience {
         grid-area: experience;
+        padding: 2rem 0 0 3rem;
+        background-color: white;
     }
 
     &__skills {
         grid-area: skills;
+        padding: 2rem 0 0 3rem;
+        background-color: white;
+
+        &--grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 2rem;
+            margin: 6rem 0;
+           
+        }
+
+        &--item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 1.3rem;
+            text-transform: uppercase;           
+        }
+
+        &--chart {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            line-height: 8rem; //test
+            margin-right: 1rem;
+            font-weight: bold;
+            text-align: center; //test
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            canvas {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }              
+        }
     } 
+}
+
+
+
+
+
+.white_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.5rem;
+
+    &__icon {
+        display: inline-block;
+        fill: var(--color-primary);
+        width: 7.5rem;
+        height: 7.5rem;
+        margin-right: 4rem;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 1rem;
+        background-color: var(--color-grey-dark);
+        font-size: 3.5rem;
+        font-weight: 300;        
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
 }

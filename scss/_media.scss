@@ -1,6 +1,17 @@
 @media (max-width: 1200px) {
     html {font-size: 50%;}
     .grid {width: 80vw;}
+
+    .cv__profile--text {font-size: 1.7rem;}
+
+    .cv__skills {
+        &--grid {
+            grid-gap: 6rem;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        
+    }
 }
 
 
@@ -36,7 +47,7 @@
     }
 
     .cv__contact--item {
-        justify-content: space-between;
+        justify-content: flex-start;
         width: 55%;
         margin: 0 auto 2rem auto;    
     }
@@ -51,11 +62,23 @@
     }
 
     .cv__contact--info {font-size: 2.5rem;}
+
+    .cv__profile--text {
+        font-size: 2rem;
+        padding: 4rem 2rem 2rem 0;
+
+        &:nth-child(3) {padding: 2rem 2rem 4rem 0;}
+    }
+
+    .cv__skills--grid {
+        margin: 6rem auto;
+        width: 70%;
+    }
 }
 
 @media (max-width: 700px) {
     .grid {
-        width: 100vw;
+        width: 100%;
         margin: 0;
     }
 
@@ -75,6 +98,8 @@
     .cv__contact--info {font-size: 2.2rem;}
 }
 
+
+
 @media (max-width: 450px) {
     .grid {
         grid-template-columns: 1fr;
@@ -90,6 +115,35 @@
         }
 
     .cv__contact--info {font-size: 2rem;}
+
+    .cv__profile {
+        padding:0;
+    
+        &--text {
+            font-size: 1.7rem;
+            padding: 1rem;
+
+            &:nth-child(3) {padding: 1rem;}
+        }
+    }
+
+    .white_header {
+        
+        &__icon {display:none;}
+        &__header{justify-content: center;}
+    }
+
+    .cv__education {
+        padding: 2rem 0 0 0;
+
+        &--timeline {margin-left: 3rem; }
+    }
+
+    .cv__experience {
+        padding: 2rem 0 0 0;
+
+        &--timeline {margin-left: 3rem; }
+    }
 }
 
 @media (max-width: 450px) {
