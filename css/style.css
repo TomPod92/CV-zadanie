@@ -115,9 +115,9 @@ body {
   width: 70vw;
   margin: 5rem auto;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  grid-template-areas: "image image image profile profile profile profile" "image image image profile profile profile profile" "image image image profile profile profile profile" "name name name education education education education" "name name name education education education education" "contact contact contact education education education education" "contact contact contact education education education education" "contact contact contact experience experience experience experience" "contact contact contact experience experience experience experience" "hobbies hobbies hobbies skills skills skills skills" "hobbies hobbies hobbies skills skills skills skills" "hobbies hobbies hobbies skills skills skills skills"; }
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "image  profile"                         "name education"                     "contact experience"                         "hobbies skills"; }
 
 .cv__box {
   border: 2px solid black; }
@@ -327,8 +327,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 2rem;
-    margin: 6rem 0; }
+    grid-gap: 4rem 2rem;
+    margin: 6rem 3rem; }
   .cv__skills--item {
     display: flex;
     justify-content: flex-start;
@@ -381,11 +381,7 @@ body {
   .grid {
     width: 80vw; }
   .cv__profile--text {
-    font-size: 1.7rem; }
-  .cv__skills--grid {
-    grid-gap: 6rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr; } }
+    font-size: 1.7rem; } }
 
 @media (max-width: 900px) {
   .grid {
@@ -412,10 +408,7 @@ body {
     font-size: 2rem;
     padding: 4rem 2rem 2rem 0; }
     .cv__profile--text:nth-child(3) {
-      padding: 2rem 2rem 4rem 0; }
-  .cv__skills--grid {
-    margin: 6rem auto;
-    width: 70%; } }
+      padding: 2rem 2rem 4rem 0; } }
 
 @media (max-width: 700px) {
   .grid {
@@ -457,7 +450,13 @@ body {
   .cv__experience {
     padding: 2rem 0 0 0; }
     .cv__experience--timeline {
-      margin-left: 3rem; } }
+      margin-left: 3rem; }
+  .cv__skills {
+    padding: 2rem 0; }
+    .cv__skills--grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      margin: 5rem 2rem; } }
 
 @media (max-width: 450px) {
   .cv__contact--item {
