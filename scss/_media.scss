@@ -20,26 +20,40 @@
 @media (max-width: 900px) {
     .grid {
         width: 90vw;
-        grid-template-areas:"image image image name name name name"
-                    "image image image name name name name"
-                    "image image image name name name name"
-                    "contact contact contact contact contact contact contact"
-                    "contact contact contact contact contact contact contact"
-                    "contact contact contact contact contact contact contact"
-                    "contact contact contact contact contact contact contact"
-                    "profile profile profile profile profile profile profile"
-                    "profile profile profile profile profile profile profile"
-                    "profile profile profile profile profile profile profile"
-                    "education education education education education education education"
-                    "education education education education education education education"
-                    "education education education education education education education"
-                    "education education education education education education education"
-                    "experience experience experience experience experience experience experience"
-                    "experience experience experience experience experience experience experience"
-                    "skills skills skills skills skills skills skills"
-                    "skills skills skills skills skills skills skills"
-                    "skills skills skills skills skills skills skills"                        
-                    "hobbies hobbies hobbies hobbies hobbies hobbies hobbies";
+        // grid-template-areas:"image image image name name name name"
+        //             "image image image name name name name"
+        //             "image image image name name name name"
+        //             "contact contact contact contact contact contact contact"
+        //             "contact contact contact contact contact contact contact"
+        //             "contact contact contact contact contact contact contact"
+        //             "contact contact contact contact contact contact contact"
+        //             "profile profile profile profile profile profile profile"
+        //             "profile profile profile profile profile profile profile"
+        //             "profile profile profile profile profile profile profile"
+        //             "education education education education education education education"
+        //             "education education education education education education education"
+        //             "education education education education education education education"
+        //             "education education education education education education education"
+        //             "experience experience experience experience experience experience experience"
+        //             "experience experience experience experience experience experience experience"
+        //             "skills skills skills skills skills skills skills"
+        //             "skills skills skills skills skills skills skills"
+        //             "skills skills skills skills skills skills skills"                        
+        //             "hobbies hobbies hobbies hobbies hobbies hobbies hobbies";
+        // }
+        grid-template-areas:
+                    "image name"
+                    
+                    "contact contact"
+                    
+                    "profile  profile"
+                    
+                    "education  education"
+                   
+                    "experience experience"
+                    
+                    "skills skills"                        
+                    "hobbies hobbies";
         }
     .cv__name {
         line-height: 1.5;
@@ -48,11 +62,14 @@
         &--name { margin-top: 1.5rem;}
     }
 
+    .cv__contact {border-top: 2px solid var(--color-grey-dark);} //test
+
     .cv__contact--item {
         justify-content: flex-start;
         width: 55%;
         margin: 0 auto 2rem auto;    
     }
+
     .cv__contact--icon {
         padding: .7rem .7rem .5rem .7rem;
 
@@ -71,11 +88,6 @@
 
         &:nth-child(3) {padding: 2rem 2rem 4rem 0;}
     }
-
-    // .cv__skills--grid {
-    //     margin: 6rem auto;
-    //     width: 70%;
-    // }
 }
 
 @media (max-width: 700px) {
@@ -84,9 +96,7 @@
         margin: 0;
     }
 
-    .cv__name {
-        font-size: 3rem;
-    }
+    .cv__name {font-size: 3rem;}
 
     .cv__contact--icon {
         padding: .6rem .6rem .4rem .6rem;
@@ -100,12 +110,8 @@
     .cv__contact--info {font-size: 2.2rem;}
 }
 
-
-
 @media (max-width: 450px) {
     .grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(8, 1fr);
         grid-template-areas:"image "
                             "name"
                             "contact"
@@ -116,10 +122,11 @@
                             "hobbies";
         }
 
+    .cv__contact {border-top: none;} //test
     .cv__contact--info {font-size: 2rem;}
 
     .cv__profile {
-        padding:0;
+        padding: 0;
     
         &--text {
             font-size: 1.7rem;
@@ -130,7 +137,6 @@
     }
 
     .white_header {
-        
         &__icon {display:none;}
         &__header{justify-content: center;}
     }
@@ -159,8 +165,6 @@
 }
 
 @media (max-width: 450px) {
-    
-
     .cv__contact--item {
         display: flex;
         flex-direction: column;
