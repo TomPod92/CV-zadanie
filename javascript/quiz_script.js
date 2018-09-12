@@ -2,7 +2,7 @@ let currentQuestion = 0;
 let score = 0;
 const allQuestions = [
     {
-        "question": "What JS stands for?",
+        "question": "What does JS stand for?",
         "option1": "JavaScript",
         "option2": "JustSomething",
         "answer": "1"
