@@ -116,7 +116,7 @@ body {
 .grid {
   width: 70vw;
   margin: 5rem auto;
-  display: grid;
+  display: none;
   grid-template-areas: "image  profile"                         "name education"                     "contact experience"                         "hobbies skills";
   box-shadow: 1rem 1rem 3rem #383838; }
 

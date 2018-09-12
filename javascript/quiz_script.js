@@ -25,16 +25,18 @@ const allQuestions = [
 
 const numberOfQuestions = allQuestions.length;
 
-const container = document.querySelector('.question_container');
+const container = document.querySelector('.question__container');
 const text = document.querySelector('.question__text');
 const answer1 = document.querySelector('.question__answer--first');
 const answer2 = document.querySelector('.question__answer--second');
 const button = document.querySelector('.question__button');
 const fail = document.querySelector('.fail');
 const reload = document.querySelector('.fail__button');
+const cv = document.querySelector('.grid');
 
 // insert current question text and answers to corresponding DOM elements
 loadQuestion = (questionIndex) => {
+    //console.log('loaded question');
     const q = allQuestions[questionIndex];
 
     text.textContent = q.question;
@@ -45,6 +47,7 @@ loadQuestion = (questionIndex) => {
 
 // load next question from array
 loadNextQuestion = () => {
+    //console.log('clicked');
     let selectedOption = document.querySelector('input[type=radio]:checked');
 
     // check if an option was selected
@@ -67,12 +70,14 @@ loadNextQuestion = () => {
             // check if all answers were correct
             if(score === 3) {
                 //wyswietlic CV
-                alert('twoje CV');
+                //alert('twoje CV');
+                container.style.display = "none";
+                cv.style.display = "grid";
                 currentQuestion = 0;
             } else {
                 //wyswietlic plansze z reloadem
                 currentQuestion = 0;
-                document.querySelector('.question__container').style.display = "none";
+                container.style.display = "none";
                 fail.style.display = "flex";
                 //alert('sprobuj jeszcze raz');
             }
