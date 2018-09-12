@@ -1,0 +1,6 @@
+@mixin transitions($time, $index) {
+    opacity: 0; //test
+        transform: translateY(-400px); //test
+        z-index: $index; //test
+        transition: all $time; //test
+}

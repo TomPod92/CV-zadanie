@@ -231,6 +231,9 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="/javascript/jquery.waypoints.min.js"></script>
+    <script src="/javascript/waypoints.js"></script>
     <script src="../javascript/easypiechart.js"></script>
     <script>
         var element = document.querySelectorAll('.cv__skills--chart');
@@ -244,43 +247,8 @@
                 lineWidth: 8,
                 lineCap: 'square',
             });
-        }));
-        
+        }));        
     </script>
-    <!-- <script src="javascript/quiz_script.js" type="text/javascript"></script> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="javascript/jquery.easypiechart.js"></script>
-    <script>
-            $(document).ready(function() {
-                var $window= $(window);
-                var width = 0;
-
-                function checkWidth() {
-                    var windowsize = $window.width() + 20;
-                    if (windowsize > 1200)  width = 80;
-                    else if (windowsize > 900) width = 60; 
-                    else if (windowsize > 60) width = 50;
-                    console.log(windowsize);
-                    console.log(width);
-                }
-                // Execute on load
-                checkWidth();
-                // Bind event listener
-                $(window).resize(checkWidth);
-
-                $(function() {
-                    $('.cv__skills--chart').easyPieChart({
-                        size: width,
-                        barColor:'#FFC935',
-                        scaleColor: false,
-                        lineWidth: 8,
-                        lineCap: 'square', 
-                    });
-
-                });
-
-            });
-    </script> -->
 </body>
 
 </html>
