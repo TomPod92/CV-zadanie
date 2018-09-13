@@ -14,6 +14,10 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+
+        @media (max-width: 900px) {width: 55%;}
+        @media (max-width: 750px) {width: 65%;}
+        @media (max-width: 550px) {width: 75%;}
     }
 
     &__text,
@@ -58,6 +62,9 @@
         font-size: 1rem;
         border: none;
         transition: all .7s;
+
+        @media (max-width: 1200px) {font-size: 1.5rem}
+        @media (max-width: 900px) {font-size: 2rem}
 
         &:hover {
             background-color: white;

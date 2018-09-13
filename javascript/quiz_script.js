@@ -303,39 +303,40 @@ animateCV = (screen) => {
     var $box4 = $('.cv__experience');
     var $box5 = $('.cv__hobbies');
     var $box6 = $('.cv__skills');
-
+    //var short = '0.4vh';
+    //var long = '0.8vh';
     displayCharts();
     console.log(screen);
     
     $box1.waypoint(function () {
         console.log('waypoint1!');
         $box1.addClass('animate');
-    });
+    },{offset: '300'});
     
     $box2.waypoint(function () {
         console.log('waypoint2!');
         $box2.addClass('animate');
-    });
-    
+    },{offset: '300'});
+
     $box3.waypoint(function () {
         console.log('waypoint3!');
         $box3.addClass('animate');
-    },{offset: screen > 900 ? '0.4vh' : '0'});
-    
+    },{offset: '250'});
+
     $box4.waypoint(function () {
         console.log('waypoint4!');
         $box4.addClass('animate');
-    },{offset: screen > 900 ? '0.4vh' : '0'});
-    
+    },{offset: '250'});
+
     $box5.waypoint(function () {
         console.log('waypoint5!');
         $box5.addClass('animate');
-    },{offset: screen > 900 ? '0.8vh' : '0'});
-    
+    },{offset: '200'});
+
     $box6.waypoint(function () {
         console.log('waypoint6!');
         $box6.addClass('animate');
-    },{offset: screen > 900 ? '0.8vh' : '0'});  
+    },{offset: '200'});
 };
 
 //--------------------------------------------------------------------------------------------
