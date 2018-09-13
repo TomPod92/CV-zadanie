@@ -57,7 +57,8 @@ body {
 .question__checkbox {
   display: none; }
   .question__checkbox:checked + .question__answer {
-    background-color: var(--color-primary); }
+    background-color: #eb4305;
+    color: white; }
 
 .question__answer {
   background-color: white;
@@ -116,7 +117,7 @@ body {
 .grid {
   width: 70vw;
   margin: 5rem auto;
-  display: none;
+  display: grid;
   grid-template-areas: "image  profile"                         "name education"                     "contact experience"                         "hobbies skills";
   box-shadow: 1rem 1rem 3rem #383838; }
 
@@ -213,10 +214,10 @@ body {
       background-color: #c03503;
       transform: scale(0.9); }
     .cv__contact--icon:hover svg {
-      fill: var(--color-grey-light); }
+      fill: white; }
     .cv__contact--icon:hover + .cv__contact--info {
       transform: scale(1.05);
-      color: var(--color-grey-light); }
+      color: white; }
     .cv__contact--icon svg {
       width: 3.5rem;
       height: 3.5rem;
@@ -265,10 +266,10 @@ body {
       transform: scale(0.9);
       background-color: #c03503; }
     .cv__hobbies--icon:hover svg {
-      fill: var(--color-grey-light); }
+      fill: white; }
     .cv__hobbies--icon:hover + .cv__hobbies--info {
       transform: scale(1.1);
-      color: var(--color-grey-light); }
+      color: white; }
     .cv__hobbies--icon svg {
       width: 4rem;
       height: 4rem;
@@ -288,8 +289,6 @@ body {
     background-color: var(--color-primary); }
   .cv__profile .white_header:hover .white_header__icon {
     fill: var(--color-grey-dark); }
-  .cv__profile .white_header:hover ~ p {
-    transform: scale(1.05); }
   .cv__profile--text {
     font-size: 1.3rem;
     letter-spacing: 1px;
@@ -383,10 +382,9 @@ body {
     background-color: var(--color-primary); }
   .cv__experience .white_header:hover .white_header__icon {
     fill: var(--color-grey-dark); }
-  .cv__experience .white_header:hover ~ .cv__education--timeline p {
-    transform: scale(1.03); }
-  .cv__experience p {
-    transition: all .6s; }
+  .cv__experience .white_header:hover ~ .cv__education--timeline h3:after {
+    transform: scale(1.2);
+    background-color: var(--color-grey-dark); }
 
 .cv__skills {
   grid-area: skills;
@@ -396,8 +394,11 @@ body {
   transform: translateY(-400px);
   z-index: 0;
   transition: all 1.5s; }
-  .cv__skills .white_header__icon:hover {
-    transform: rotateZ(-270deg); }
+  .cv__skills .white_header:hover .white_header__icon {
+    transform: rotateZ(-180deg);
+    fill: var(--color-grey-dark); }
+  .cv__skills .white_header:hover .white_header__header {
+    background-color: var(--color-primary); }
   .cv__skills--grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -480,8 +481,12 @@ body {
     font-size: 4rem; }
     .cv__name--name {
       margin-top: 1.5rem; }
-  .cv__contact {
-    border-top: 2px solid var(--color-grey-dark); }
+  .cv__contact--contact {
+    background-color: var(--color-grey-dark);
+    color: var(--color-primary);
+    margin: 0 auto 2rem auto;
+    width: 90%;
+    text-align: center; }
   .cv__contact--item {
     justify-content: flex-start;
     width: 55%;

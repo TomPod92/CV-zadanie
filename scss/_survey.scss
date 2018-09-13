@@ -35,7 +35,8 @@
         display: none;
 
         &:checked + .question__answer {
-            background-color: var(--color-primary);
+            background-color: #eb4305;
+            color: white;
         }
     }
 

@@ -1,30 +1,14 @@
 .grid {
     width: 70vw;
     margin: 5rem auto;
-    display: none;
-    // grid-template-columns: repeat(7, 1fr);
-    // grid-template-rows: repeat(11, 1fr);
-    // grid-template-areas:"image image image profile profile profile profile"
-    //                     "image image image profile profile profile profile"
-    //                     "image image image profile profile profile profile"
-    //                     "name name name education education education education"
-    //                     "name name name education education education education"                       
-    //                     "contact contact contact education education education education"
-    //                     "contact contact contact experience experience experience experience"
-    //                     "contact contact contact experience experience experience experience"
-    //                     "hobbies hobbies hobbies skills skills skills skills"
-    //                     "hobbies hobbies hobbies skills skills skills skills"
-    //                     "hobbies hobbies hobbies skills skills skills skills";  
-
-    //grid-template-columns: 1fr 1fr;
-    //grid-template-rows: 1fr 1fr 1fr 1fr;
+    display: grid;
     grid-template-areas:"image  profile"                        
                         "name education"                    
                         "contact experience"                        
                         "hobbies skills";
     box-shadow: 1rem 1rem 3rem #383838;
 }
-
+//---------------------------------------------------------------------------------------
 .cv {
     &__image {
         grid-area: image;
@@ -66,7 +50,7 @@
             &:hover {transform: scale(.9);}
         }
     }
-
+//---------------------------------------------------------------------------------------
     &__name {
         grid-area: name;
         text-align: center;
@@ -94,7 +78,7 @@
             background-color: var(--color-grey-dark);
         }
     }
-
+//---------------------------------------------------------------------------------------
     &__contact {
         grid-area: contact;
         background-color: var(--color-primary);
@@ -132,8 +116,8 @@
                 transform: scale(.9);
             }
 
-            &:hover svg {fill: var(--color-grey-light);}
-            &:hover + .cv__contact--info {transform: scale(1.05);color:var(--color-grey-light);}
+            &:hover svg {fill: white;}
+            &:hover + .cv__contact--info {transform: scale(1.05);color:white;}
             
             svg {
                 width: 3.5rem;
@@ -149,7 +133,7 @@
             transition: all .6s;            
         }
     }
-
+//---------------------------------------------------------------------------------------
     &__hobbies {
         grid-area: hobbies;
         background-color: var(--color-primary);
@@ -181,7 +165,6 @@
         &--item {
             display: flex;
             align-items: center;
-            //&:hover .cv__hobbies--icon {background-color: #c03503;}
         }
 
         &--icon {
@@ -195,10 +178,10 @@
                 background-color: #c03503;
             }
             
-            &:hover svg {fill: var(--color-grey-light);}
+            &:hover svg {fill: white;}
             &:hover + .cv__hobbies--info {
                 transform: scale(1.1);
-                color: var(--color-grey-light);
+                color: white;
             }
 
             svg {
@@ -215,7 +198,7 @@
             transition: all .6s;
         }
     }    
-
+//---------------------------------------------------------------------------------------
     &__profile {
         grid-area: profile;
         padding: 4rem 0 0 3rem;
@@ -225,7 +208,6 @@
         .white_header {
             &:hover .white_header__header {background-color: var(--color-primary);}
             &:hover .white_header__icon {fill: var(--color-grey-dark);}
-            &:hover ~ p {transform: scale(1.05);}
         }
         
 
@@ -236,11 +218,10 @@
             padding: 1rem 2rem 1rem 0;
             transition: all .6s;
 
-            &:nth-child(2) {margin-top: 2rem;}
-            
+            &:nth-child(2) {margin-top: 2rem;}            
         }
     }
-
+//---------------------------------------------------------------------------------------
     &__education {
         grid-area: education;
         padding: 2rem 0 0 3rem;
@@ -295,9 +276,7 @@
                 @media (max-width: 500px) {font-size: 2.4rem;}
             }
 
-            h5 {
-                font-size: 1.3rem;
-            }
+            h5 {font-size: 1.3rem;}
 
             p {
                 font-size: 1.2rem;
@@ -311,7 +290,7 @@
             }
         }
     }
-
+//---------------------------------------------------------------------------------------
     &__experience {
         grid-area: experience;
         padding: 1rem 0 0 3rem;
@@ -321,22 +300,26 @@
         .white_header {
             &:hover .white_header__header {background-color: var(--color-primary);}
             &:hover .white_header__icon {fill: var(--color-grey-dark);}
-            &:hover ~ .cv__education--timeline p {transform: scale(1.03);}
+
+            &:hover ~ .cv__education--timeline h3:after {
+                transform: scale(1.2);
+                background-color:var(--color-grey-dark);
+            }
         }
-
-        p {transition: all .6s;}
     }
-
+//---------------------------------------------------------------------------------------
     &__skills {
         grid-area: skills;
         padding: 2rem 0 0 3rem;
         background-color: white;
         @include transitions(1.5s, 0);
 
-        & .white_header {
-            //transform: rotateZ(-180deg);
-            &__icon:hover {transform: rotateZ(-270deg);}
+        & .white_header:hover .white_header__icon {
+            transform: rotateZ(-180deg);
+            fill: var(--color-grey-dark);
         }
+
+        & .white_header:hover .white_header__header {background-color: var(--color-primary);}
 
         &--grid {
             display: grid;
@@ -375,7 +358,7 @@
         }
     } 
 }
-
+//---------------------------------------------------------------------------------------
 .white_header {
     display: flex;
     justify-content: space-between;

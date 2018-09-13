@@ -3,44 +3,12 @@
     .grid {width: 80vw;}
 
     .cv__profile--text {font-size: 1.7rem;}
-
-    // .cv__skills {
-    //     &--grid {
-    //         grid-gap: 6rem;
-    //         grid-template-columns: 1fr 1fr;
-    //         grid-template-rows: 1fr 1fr 1fr;
-    //     }
-        
-    // }
-
-    //.cv__skills--grid {margin: 6rem 5rem 0 6rem;}
 }
 
-
+//---------------------------------------------------------------------------------------
 @media (max-width: 900px) {
     .grid {
         width: 90vw;
-        // grid-template-areas:"image image image name name name name"
-        //             "image image image name name name name"
-        //             "image image image name name name name"
-        //             "contact contact contact contact contact contact contact"
-        //             "contact contact contact contact contact contact contact"
-        //             "contact contact contact contact contact contact contact"
-        //             "contact contact contact contact contact contact contact"
-        //             "profile profile profile profile profile profile profile"
-        //             "profile profile profile profile profile profile profile"
-        //             "profile profile profile profile profile profile profile"
-        //             "education education education education education education education"
-        //             "education education education education education education education"
-        //             "education education education education education education education"
-        //             "education education education education education education education"
-        //             "experience experience experience experience experience experience experience"
-        //             "experience experience experience experience experience experience experience"
-        //             "skills skills skills skills skills skills skills"
-        //             "skills skills skills skills skills skills skills"
-        //             "skills skills skills skills skills skills skills"                        
-        //             "hobbies hobbies hobbies hobbies hobbies hobbies hobbies";
-        // }
         grid-template-areas:
                     "image name"
                     
@@ -55,6 +23,7 @@
                     "skills skills"                        
                     "hobbies hobbies";
         }
+
     .cv__name {
         line-height: 1.5;
         font-size: 4rem;
@@ -62,7 +31,13 @@
         &--name { margin-top: 1.5rem;}
     }
 
-    .cv__contact {border-top: 2px solid var(--color-grey-dark);} //test
+    .cv__contact--contact {
+        background-color: var(--color-grey-dark); 
+        color: var(--color-primary);
+        margin: 0 auto 2rem auto;
+        width: 90%;
+        text-align: center;
+    }
 
     .cv__contact--item {
         justify-content: flex-start;
@@ -89,7 +64,7 @@
         &:nth-child(3) {padding: 2rem 2rem 4rem 0;}
     }
 }
-
+//---------------------------------------------------------------------------------------
 @media (max-width: 700px) {
     .grid {
         width: 100%;
@@ -163,7 +138,7 @@
         }
     }
 }
-
+//---------------------------------------------------------------------------------------
 @media (max-width: 450px) {
     .cv__contact--item {
         display: flex;
